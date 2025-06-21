@@ -1,23 +1,23 @@
-# 🧠 Neovim Config - Modular Setup (Lua + VimScript)
+# 🧠 Neovim Configuration (Lua + VimScript)
 
-Configuração pessoal do Neovim, modularizada e organizada com suporte a LSP, autocompletar, snippets, Telescope e muito mais. Ideal para desenvolvimento em C, C++, JavaScript e Java.
+Personal Neovim setup, modularized and organized with support for LSP, autocompletion, snippets, Telescope and more.
 
-## 📦 Plugins Usados
+## 📦 Plugins
 
-Gerenciados com [vim-plug](https://github.com/junegunn/vim-plug):
+Plugin Manager: [vim-plug](https://github.com/junegunn/vim-plug):
 
-- **Interface**
+- **Theme**
 
-  - [`sainnhe/sonokai`](https://github.com/sainnhe/sonokai) — tema elegante
+  - [`sainnhe/sonokai`](https://github.com/sainnhe/sonokai) — elegant color scheme
   - [`vim-airline/vim-airline`](https://github.com/vim-airline/vim-airline) — statusline
-  - [`preservim/nerdtree`](https://github.com/preservim/nerdtree) — navegador de arquivos
+  - [`preservim/nerdtree`](https://github.com/preservim/nerdtree) — file tree explorer
 
-- **Produtividade**
+- **Utility Plugins**
 
-  - [`jiangmiao/auto-pairs`](https://github.com/jiangmiao/auto-pairs) — inserção automática de parênteses
+  - [`jiangmiao/auto-pairs`](https://github.com/jiangmiao/auto-pairs) — automatic parentheses insertion
   - [`nvim-telescope/telescope.nvim`](https://github.com/nvim-telescope/telescope.nvim) — fuzzy finder
 
-- **Autocompletar e LSP**
+- **LSP and Autocompletion**
 
   - [`hrsh7th/nvim-cmp`](https://github.com/hrsh7th/nvim-cmp)
   - [`hrsh7th/cmp-nvim-lsp`](https://github.com/hrsh7th/cmp-nvim-lsp)
@@ -25,34 +25,30 @@ Gerenciados com [vim-plug](https://github.com/junegunn/vim-plug):
   - [`hrsh7th/vim-vsnip`](https://github.com/hrsh7th/vim-vsnip)
   - [`neovim/nvim-lspconfig`](https://github.com/neovim/nvim-lspconfig)
 
-## 📂 Estrutura dos Arquivos
+## 📂 Filetree
 
-- `init.vim`: ponto de entrada principal
-- `settings.vim`: configurações globais
-- `theme.vim`: configurações de tema
-- `vim-plug/plugins.vim`: plugins declarados
-- `lua/plugins/cmp-config.lua`: configuração do nvim-cmp
-- `lua/lsp/init.lua`: inicialização dos LSPs
+- `init.vim`: main settings file of nvim
+- `settings.vim`: Global settings + Autocmd + Remaps
+- `theme.vim`: Theme settings
+- `vim-plug/plugins.vim`: Declared plugins
+- `lua/plugins/cmp-config.lua`: nvim-cmp settings
+- `lua/lsp/init.lua`: LSP's initialization
 - `lua/lsp/handlers.lua`: keybindings e on\_attach
-- `lua/lsp/{clangd, tsserver, jdtls}.lua`: LSPs por linguagem
+- `lua/lsp/{clangd, tsserver, jdtls}.lua`: Languages LSP
 
-## 🛠 Requisitos
+## 🛠 Requiremnts
 
 - Neovim ≥ 0.7
-- NerdFonts (para Airline)
-- Instalar servidores LSP desejados:
-  - `clangd` para C/C++
-  - `jdtls` para Java
-  - `typescript-language-server` para JS/TS (`npm i -g typescript-language-server`)
+- NerdFonts (Airline)
+- Install desired LSP servers:
+  - `clangd` for C/C++
+  - `jdtls` for Java
+  - `typescript-language-server` for JS/TS (`npm i -g typescript-language-server`)
 
-## 🚀 Instalação
+## 🚀 Instalation
 
 ```bash
 git clone https://github.com/seu-usuario/nvim-config ~/.config/nvim
 nvim +PlugInstall +qall
 ```
-
 ---
-
-Feito com ❤️ por [Seu Nome ou nick]
-
