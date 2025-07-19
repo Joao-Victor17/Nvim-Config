@@ -47,10 +47,41 @@ let g:loaded_perl_provider = 0
 
 let mapleader = " "
 
+"""Abrir Terminal """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <A-t> :terminal<CR>
+
+""" Abrir e Fechar o NERDTREE """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <C-b> :NERDTreeToggle<CR>
 
+""" Mudar de janela ativa """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <Leader>h <C‑w>h
+nnoremap <Leader>j <C‑w>j
+nnoremap <Leader>k <C‑w>k
+nnoremap <Leader>l <C‑w>l
+
+""" Utilizar o Telescope  """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <leader>ff :Telescope find_files<CR>
 nnoremap <leader>fg :Telescope live_grep<CR>
 nnoremap <leader>fb :Telescope buffers<CR>
 nnoremap <leader>fh :Telescope help_tags<CR>
- 
+
+""" Troca entre os buffers ativos """""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <Leader>bn :bnext<CR>
+nnoremap <Leader>bp :bprevious<CR>
+
+""" Redimensiona a janela ativa  """""""""""""""""""""""""""''"""""""""""""""""""""""""""
+nnoremap <Up>    :resize +2<CR>
+nnoremap <Down>  :resize -2<CR>
+nnoremap <Left>  :vertical resize -2<CR>
+nnoremap <Right> :vertical resize +2<CR>
+
+""" Salva/Fecha o arquivo  """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <Leader>w :w<CR>
+nnoremap <Leader>q :q<CR>
+nnoremap <Leader>x :x<CR>
+
+""" Mover as linhas """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <A-k> :m .-2<CR>==
+vnoremap <A-j> :m '>+1<CR>gv=gv
+vnoremap <A-k> :m '<-2<CR>gv=gv
+nnoremap <A-j> :m .+1<CR>==
